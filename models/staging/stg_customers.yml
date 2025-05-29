@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: demo_schema
+    tables:
+      - name: raw_customers
+
+models:
+  - name: stg_customers
+    description: "Staging model for customer data from batch ingestion"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: subscription_type
+      

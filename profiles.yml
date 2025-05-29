@@ -1,0 +1,12 @@
+demo_hybrid_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: demo_user
+      password: demo
+      port: 5433
+      dbname: demo_db
+      schema: demo_schema
+      threads: 1

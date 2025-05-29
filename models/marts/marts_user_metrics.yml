@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: marts_user_metrics
+    description: "Final aggregated metrics per user based on events"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: total_events
+        tests:
+          - not_null

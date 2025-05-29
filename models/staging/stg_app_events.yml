@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: demo_schema
+    tables:
+      - name: raw_app_events
+
+models:
+  - name: stg_app_events
+    description: "Staging model for streaming app events"
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        tests:
+          - not_null

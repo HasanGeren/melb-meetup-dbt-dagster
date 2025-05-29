@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_user_activity
+    description: "Joins app events with customer data to enrich event context"
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        tests:
+          - not_null
