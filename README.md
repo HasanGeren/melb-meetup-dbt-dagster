@@ -1,15 +1,18 @@
-Welcome to your new dbt project!
+## Melbourne Data Engineering Meetup Demo
 
-### Using the starter project
+This repository was created for the Melbourne Data Engineering Meetup. It demonstrates how dbt's materialized views and incremental models can be integrated with Dagster to handle hybrid data pipelines.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
+
+## Project Structure
+
+- `models/` - Contains dbt models, organized by pipeline.
+- `event_simulator/` - Python scripts to simulate event data for the demo.
+- `hybrid_pipeline/` - Dagster project integrating dbt models, assets, and schedules for hybrid orchestration.
+  - `assets/` - Dagster asset definitions.
+  - `schedules/` - Dagster schedule definitions.
+  - `hybrid_pipeline_tests/` - Tests for Dagster assets and pipelines.
+- `dbt_project.yml` - dbt project configuration.
+- `profiles.yml` - dbt profiles for connection settings.
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices

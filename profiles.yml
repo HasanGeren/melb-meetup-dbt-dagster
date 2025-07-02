@@ -3,7 +3,7 @@ demo_hybrid_pipeline:
   outputs:
     dev:
       type: snowflake
-      account: CPDXDIA-SC49105  
+      account: snowflake_account
       user: demo_user
       password: "demo_password"
       database: DEMO_DB
