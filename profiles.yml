@@ -2,11 +2,12 @@ demo_hybrid_pipeline:
   target: dev
   outputs:
     dev:
-      type: postgres
-      host: localhost
+      type: snowflake
+      account: CPDXDIA-SC49105  
       user: demo_user
-      password: demo
-      port: 5433
-      dbname: demo_db
-      schema: demo_schema
+      password: "demo_password"
+      database: DEMO_DB
+      warehouse: COMPUTE_WH
+      schema: DEMO_SCHEMA
       threads: 1
+      client_session_keep_alive: false
